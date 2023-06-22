@@ -1,0 +1,86 @@
+/* .button {
+    padding-top: 2rem;
+} */
+
+.changeTheme label {
+    width: 150px;
+    height: 50px;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+.changeTheme label:after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    background: linear-gradient(180deg, #ffcc89, #d8860b);
+    border-radius: 180px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.changeTheme input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.changeTheme input:checked+label {
+    background: #242424;
+    border: 1px solid white;
+}
+
+.changeTheme input:checked+label:after {
+    left: 140px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+.changeTheme label,
+label:after {
+    transition: 0.3s
+}
+
+.changeTheme label:active:after {
+    width: 260px;
+}
+
+/* Icon Style */
+.changeTheme label ion-icon {
+    position: absolute;
+    font-size: 35px;
+    top: 7px;
+    z-index: 100;
+}
+
+.changeTheme label ion-icon.sun {
+    left: 10px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.changeTheme label ion-icon.moon {
+    left: 105px;
+    color: #7e7e7e;
+    transition: 0.3s;
+}
+
+.changeTheme input:checked+label ion-icon.sun {
+    color: #7e7e7e;
+}
+
+.changeTheme input:checked+label ion-icon.moon {
+    color: #fff;
+}
+
+.changeTheme label {
+    margin-top: -22px !important;
+    margin-left: 10px;
+
+}
